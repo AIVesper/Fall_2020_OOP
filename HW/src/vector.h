@@ -263,7 +263,7 @@ double area(Vector a[], int sides)
     {
         Vector c = centroid(a, sides);
         Vector b = a[0] - c;
-        angleComparator comp = angleComparator(c, b);
+        angleComparator comp(c, b);
         BubbleSort(a, a + sides, comp);
         for (int i = 0; i < (sides - 2); i++)
         {
