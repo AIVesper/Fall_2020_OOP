@@ -5,8 +5,8 @@ all:karma
 #target: src/stringExample.cpp src/chk_string.cpp what
 #	g++ src/stringExample.cpp src/chk_string.cpp -o bin/stringExample
 
-karma: src/dot.cpp test/ut_main.cpp what
-	g++ -std=c++11 test/ut_main.cpp src/dot.cpp -o bin/ut_all -lgtest -lpthread
+karma: test/ut_main.cpp what
+	g++ -std=c++11 test/ut_main.cpp -o bin/ut_all -lgtest -lpthread
 
 what:
 	mkdir -p bin obj

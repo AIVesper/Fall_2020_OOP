@@ -1,6 +1,6 @@
 #include "../src/convexPolygon.h"
 #include "../src/vector.h"
-
+#include <gtest/gtest.h>
 #include <algorithm>
 
 class PolygonTest : public ::testing::Test { // test fixture, PolygonTest: derived class, Test: base class
@@ -55,7 +55,7 @@ TEST_F(PolygonTest,centroidTEST){
 
 TEST_F(PolygonTest,createTEST){
   mathVector vectors[4] = {u, w, v, x};
-  Polygon p = Polygon::CreatePolygon(4, vectors); 
+  Polygon p=Polygon::CreatePolygon(4, vectors); 
   ASSERT_EQ(p.getPrimeter(), 14);
 }
 
